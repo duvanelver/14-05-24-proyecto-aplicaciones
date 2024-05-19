@@ -1,10 +1,22 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaUser } from 'react-icons/fa';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 
 function Navegador() {
   const location = useLocation();
 
+  const [usuarioActivo, setUsuarioActivo] = useState(null);
+  const navegar = useNavigate();
+
+  useEffect(() => {
+    const usuario = localStorage.getItem('usuarioActivo');
+    setUsuarioActivo(usuario);
+  }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem('usuarioActivo');
+    navegar('/');
+  };
   return (
     <header>
       <nav className="navbar navbar-expand-lg bg-info">
