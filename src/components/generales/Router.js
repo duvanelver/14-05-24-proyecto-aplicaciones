@@ -3,7 +3,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 //import Login from '../usuarios/Login'
 import Home from './Home'
 import Historias from '../historias/Historias'
-import Template from './EjemploTemplate/Template'
+import Template from './EjemploTemplate/Template' 
 function Router() {
   return (
     <div>

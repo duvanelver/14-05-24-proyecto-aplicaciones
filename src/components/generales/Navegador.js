@@ -1,17 +1,49 @@
-import React from 'react'
+import React from 'react';
+import { FaUser } from 'react-icons/fa';
+import { NavLink, useLocation } from 'react-router-dom';
 
 function Navegador() {
+  const location = useLocation();
+
   return (
-    <header className="container">
-        <nav>
-            <ul className="nav nav-tabs">
-                <li className="nav-item"><a className="nav-link" href="/">Home</a></li>
-                <li className="nav-item"><a className="nav-link" href="/Historias">Historias</a></li>
-                {/* <li className="nav-item"><a className="link-danger" href="/login">Salir</a></li> */}
-            </ul> 
-        </nav>
+    <header>
+      <nav className="navbar navbar-expand-lg bg-info">
+        <div className="container-fluid">
+          <img src="../../../logoClinica.png" className="rounded mx-auto d-block" width='40px' alt="Logo"/>
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <div className="col-md-12">
+              <div className="row">
+                <div className="col-md-10">
+                  <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li className="nav-item">
+                      <NavLink className={`nav-link text-white ${location.pathname === '/' ? 'active' : ''}`} to="/">Home</NavLink>
+                    </li>
+                    <li className="nav-item">
+                      <NavLink className={`nav-link text-white ${location.pathname === '/Historias' ? 'active' : ''}`} to="/Historias">Historias</NavLink>
+                    </li>
+                  </ul>
+                </div>
+                <div className="col-md-2 text-end">
+                  <div className="dropdown">
+                    <button className="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <FaUser />
+                    </button>
+                    <ul className="dropdown-menu">
+                      <li><a className="dropdown-item" href="#">Perfil</a></li>
+                      <li><a className="dropdown-item" href="#">Cerrar Sesion</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
     </header>
-  )
+  );
 }
 
-export default Navegador
+export default Navegador;

@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+.active{
+  background-color: #cfe2ff;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.footer{
+  padding: 10px 20px;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}

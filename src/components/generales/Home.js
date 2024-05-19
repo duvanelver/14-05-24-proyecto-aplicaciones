@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import Navegador from './Navegador'
 import { useNavigate } from 'react-router-dom';
+import Footer from './Footer';
 
 function Home() {
   const navegar = useNavigate();
@@ -14,7 +15,11 @@ function Home() {
   }, [navegar, usuarioActivo])
   
   return (
-    <div><Navegador/>Home</div>
+    <div>
+      <Navegador/>
+      Home      
+      <Footer/>
+    </div>
   )
 }
 
