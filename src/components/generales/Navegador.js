@@ -24,6 +24,15 @@ function Navegador() {
                     <li className="nav-item">
                       <NavLink className={`nav-link text-white ${location.pathname === '/Historias' ? 'active' : ''}`} to="/Historias">Historias</NavLink>
                     </li>
+                    <li className="nav-item">
+                      <NavLink className={`nav-link text-white ${location.pathname === '/Agendamiento' ? 'active' : ''}`} to="/Agendamiento">Agendamiento</NavLink>
+                    </li>
+                    <li className="nav-item">
+                      <NavLink className={`nav-link text-white ${location.pathname === '/Medicamentos' ? 'active' : ''}`} to="/Medicamentos">Medicamentos</NavLink>
+                    </li>
+                    <li className="nav-item">
+                      <NavLink className={`nav-link text-white ${location.pathname === '/Citas' ? 'active' : ''}`} to="/Citas">Citas</NavLink>
+                    </li>
                   </ul>
                 </div>
                 <div className="col-md-2 text-end">
@@ -32,8 +41,8 @@ function Navegador() {
                       <FaUser />
                     </button>
                     <ul className="dropdown-menu">
-                      <li><a className="dropdown-item" href="#">Perfil</a></li>
-                      <li><a className="dropdown-item" href="#">Cerrar Sesion</a></li>
+                      <li><a className="dropdown-item" href="/">Perfil</a></li>
+                      <li><a className="dropdown-item" href="/">Cerrar Sesion</a></li>
                     </ul>
                   </div>
                 </div>
